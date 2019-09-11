@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Test Security</string>
+    <string name="username">Username</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="log_out">Log Out</string>
+    <string name="congrats_you_have_logged_in">Congrats, You have logged in!</string>
+</resources>
