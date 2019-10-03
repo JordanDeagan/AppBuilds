@@ -49,7 +49,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //Adding a new User
-    public void addUser(String username, LinkedList<ArrayList<String>[]> passGame) {
+    void addUser(String username, ArrayList<String> passGame) {
         SQLiteDatabase db = this.getWritableDatabase(); //get the database
         String password = convertGame(passGame);        //convert the passed game states to a String
         ContentValues values = new ContentValues();     //Content values to store
@@ -63,26 +63,15 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    private String convertGame(LinkedList<ArrayList<String>[]> GameList){
+    private String convertGame(ArrayList<String> GameList){
         StringBuilder password = new StringBuilder();
-        for (ArrayList<String>[] game: GameList){   //run through every game state stored in the list, min 1
-            for(int i = 0;i<game.length-1;i++){     //go through the spaces in the state, last reserved for name
-                password.append(game[game.length - 1].get(0));  //add game's name before each space
-                password.append(i);                 //add space number after name
-                if(!game[i].isEmpty()){
-                    ArrayList<String> space = game[i];  //assign temporary list for used space
-                    Collections.sort(space,String.CASE_INSENSITIVE_ORDER);  //order alphabetically
-                    for(String item:space){             //go through each item
-                        password.append(item);          //add each item in a space to the string
-                    }
-                }
-
-            }
+        for (String game: GameList){   //run through every game state stored in the list, min 1
+            password.append(game);
         }
         return password.toString();
     }
 
-    public boolean usernameExists(String username) {
+    boolean usernameExists(String username) {
         //make query that returns all instances of a username, should only return 1 or 0 results
         String selectQuery = "SELECT * FROM " + USER_TABLE +
                 " WHERE " + KEY_NAME + " = " + '"' + username + '"';
@@ -98,7 +87,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean logsIn(String username, LinkedList<ArrayList<String>[]> passGame) {
+    boolean logsIn(String username, ArrayList<String> passGame) {
         SQLiteDatabase db = this.getReadableDatabase();
         String password = convertGame(passGame);                //convert entered games to string
         String selectQuery = "SELECT * FROM " + USER_TABLE +
