@@ -6,17 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class LoggedIn extends AppCompatActivity {
 
     Button logOut;
+    TextView welcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
         logOut = (Button) findViewById(R.id.LogOut);
-
+        welcome = findViewById(R.id.Welcome);
+        welcome.setText("Welcome " + getIntent().getStringExtra("USERNAME"));
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,7 +29,7 @@ public class LoggedIn extends AppCompatActivity {
     }
 
     private void loggingOut(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(getBaseContext(), MainActivity.class);
         startActivity(intent);
     }
 }

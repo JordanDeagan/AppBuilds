@@ -48,7 +48,7 @@ public class SignUp extends AppCompatActivity {
             if(!MainActivity.db.usernameExists(user)) {
                 if(password.equals(confirm)) {
                     MainActivity.db.addUser(user,password);
-                    Intent intent = new Intent(this, MainActivity.class);
+                    Intent intent = new Intent(getBaseContext(), MainActivity.class);
                     startActivity(intent);
                 }else {
                     Toast toast = Toast.makeText(this, "Check your passwords match\nand try again", Toast.LENGTH_SHORT);

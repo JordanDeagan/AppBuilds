@@ -46,7 +46,8 @@ public class Login extends AppCompatActivity {
         if(user.length()>0 && pass.length()>0) {
             if(MainActivity.db.usernameExists(user)){
                 if(MainActivity.db.logsIn(user,pass)){
-                    Intent intent = new Intent(this, LoggedIn.class);
+                    Intent intent = new Intent(getBaseContext(), LoggedIn.class);
+                    intent.putExtra("USERNAME",user);
                     startActivity(intent);
                 }
                 else {
