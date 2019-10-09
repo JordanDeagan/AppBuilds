@@ -32,6 +32,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2" />
 
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView2"
         android:layout_width="0dp"
@@ -46,6 +56,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/Chess"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -70,6 +81,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ChineseCheckers"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -94,6 +106,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/Catan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -118,6 +131,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/Clue"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -142,6 +156,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/Monopoly"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -172,7 +187,8 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -183,6 +199,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/Battleship"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -204,9 +221,11 @@
                     android:layout_gravity="center_vertical"
                     android:text="Ship Deployment"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/TicketToRide"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -231,6 +250,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/Scrabble"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -256,5 +276,15 @@
 
         </LinearLayout>
     </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

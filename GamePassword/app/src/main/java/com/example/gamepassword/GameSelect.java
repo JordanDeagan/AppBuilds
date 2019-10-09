@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ public class GameSelect extends AppCompatActivity {
     public ArrayList<String> games, previous;
     private int selectionState;
     private String username;
+    LinearLayout chess;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,13 @@ public class GameSelect extends AppCompatActivity {
         if(selectionState==2){
             previous=getIntent().getStringArrayListExtra("LAST");
         }
+        chess = findViewById(R.id.Chess);
+        chess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startGame(Chess.class);
+            }
+        });
     }
 
     private void startGame(Class choice){
