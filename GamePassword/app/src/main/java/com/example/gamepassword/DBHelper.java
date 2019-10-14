@@ -111,7 +111,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return false;                                           //if no user, don't log in
     }
 
-    private byte[] hashed(String password, byte[] salt) {
+    byte[] hashed(String password, byte[] salt) {
         KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 128);
         SecretKeyFactory factory = null;
         try {
