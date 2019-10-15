@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -17,6 +19,8 @@ public class GameSelect extends AppCompatActivity {
     private int selectionState;
     private String username;
     LinearLayout chess;
+    Button sub;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +42,13 @@ public class GameSelect extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startGame(Chess.class);
+            }
+        });
+        sub = findViewById(R.id.submit);
+        sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                submit();
             }
         });
     }
@@ -69,6 +80,7 @@ public class GameSelect extends AppCompatActivity {
             }
         } else if(selectionState==1){
             confirmPassword();
+            Log.d("GameSelect","Confirm Password");
         }
         else if(selectionState ==2){
             if(previous.equals(games)){
