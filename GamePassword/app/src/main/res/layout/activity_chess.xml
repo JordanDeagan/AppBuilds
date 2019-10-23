@@ -7,29 +7,31 @@
     tools:context=".Chess">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="420dp"
+        android:id="@+id/ChessBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/row1"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/Chess1"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess2"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -39,8 +41,8 @@
 
                 <ImageView
                     android:id="@+id/Chess2"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess3"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -50,8 +52,8 @@
 
                 <ImageView
                     android:id="@+id/Chess3"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess4"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -61,8 +63,8 @@
 
                 <ImageView
                     android:id="@+id/Chess4"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess5"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -72,8 +74,8 @@
 
                 <ImageView
                     android:id="@+id/Chess5"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess6"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -83,8 +85,8 @@
 
                 <ImageView
                     android:id="@+id/Chess6"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess7"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -94,8 +96,8 @@
 
                 <ImageView
                     android:id="@+id/Chess7"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess8"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -105,8 +107,8 @@
 
                 <ImageView
                     android:id="@+id/Chess8"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -119,18 +121,19 @@
 
         <LinearLayout
             android:id="@+id/row2"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/Chess9"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess10"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -140,8 +143,8 @@
 
                 <ImageView
                     android:id="@+id/Chess10"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess11"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -151,8 +154,8 @@
 
                 <ImageView
                     android:id="@+id/Chess11"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess12"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -162,8 +165,8 @@
 
                 <ImageView
                     android:id="@+id/Chess12"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess13"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -173,8 +176,8 @@
 
                 <ImageView
                     android:id="@+id/Chess13"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess14"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -184,8 +187,8 @@
 
                 <ImageView
                     android:id="@+id/Chess14"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess15"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -195,8 +198,8 @@
 
                 <ImageView
                     android:id="@+id/Chess15"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess16"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -206,8 +209,8 @@
 
                 <ImageView
                     android:id="@+id/Chess16"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -220,8 +223,8 @@
 
         <LinearLayout
             android:id="@+id/row3"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -230,8 +233,8 @@
 
                 <ImageView
                     android:id="@+id/Chess17"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess18"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -241,8 +244,8 @@
 
                 <ImageView
                     android:id="@+id/Chess18"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess19"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -252,8 +255,8 @@
 
                 <ImageView
                     android:id="@+id/Chess19"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess20"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -263,8 +266,8 @@
 
                 <ImageView
                     android:id="@+id/Chess20"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess21"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -274,8 +277,8 @@
 
                 <ImageView
                     android:id="@+id/Chess21"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess22"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -285,8 +288,8 @@
 
                 <ImageView
                     android:id="@+id/Chess22"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess23"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -296,8 +299,8 @@
 
                 <ImageView
                     android:id="@+id/Chess23"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess24"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -307,8 +310,8 @@
 
                 <ImageView
                     android:id="@+id/Chess24"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -321,8 +324,8 @@
 
         <LinearLayout
             android:id="@+id/row4"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -331,8 +334,8 @@
 
                 <ImageView
                     android:id="@+id/Chess25"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess26"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -342,8 +345,8 @@
 
                 <ImageView
                     android:id="@+id/Chess26"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess27"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -353,8 +356,8 @@
 
                 <ImageView
                     android:id="@+id/Chess27"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess28"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -364,8 +367,8 @@
 
                 <ImageView
                     android:id="@+id/Chess28"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess29"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -375,8 +378,8 @@
 
                 <ImageView
                     android:id="@+id/Chess29"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess30"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -386,8 +389,8 @@
 
                 <ImageView
                     android:id="@+id/Chess30"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess31"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -397,8 +400,8 @@
 
                 <ImageView
                     android:id="@+id/Chess31"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess32"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -408,8 +411,8 @@
 
                 <ImageView
                     android:id="@+id/Chess32"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -422,8 +425,8 @@
 
         <LinearLayout
             android:id="@+id/row5"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -432,8 +435,8 @@
 
                 <ImageView
                     android:id="@+id/Chess33"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess34"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -443,8 +446,8 @@
 
                 <ImageView
                     android:id="@+id/Chess34"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess35"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -454,8 +457,8 @@
 
                 <ImageView
                     android:id="@+id/Chess35"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess36"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -465,8 +468,8 @@
 
                 <ImageView
                     android:id="@+id/Chess36"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess37"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -476,8 +479,8 @@
 
                 <ImageView
                     android:id="@+id/Chess37"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess38"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -487,8 +490,8 @@
 
                 <ImageView
                     android:id="@+id/Chess38"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess39"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -498,8 +501,8 @@
 
                 <ImageView
                     android:id="@+id/Chess39"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess40"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -509,8 +512,8 @@
 
                 <ImageView
                     android:id="@+id/Chess40"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -523,8 +526,8 @@
 
         <LinearLayout
             android:id="@+id/row6"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -533,8 +536,8 @@
 
                 <ImageView
                     android:id="@+id/Chess41"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess42"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -544,8 +547,8 @@
 
                 <ImageView
                     android:id="@+id/Chess42"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess43"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -555,8 +558,8 @@
 
                 <ImageView
                     android:id="@+id/Chess43"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess44"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -566,8 +569,8 @@
 
                 <ImageView
                     android:id="@+id/Chess44"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess45"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -577,8 +580,8 @@
 
                 <ImageView
                     android:id="@+id/Chess45"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess46"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -588,8 +591,8 @@
 
                 <ImageView
                     android:id="@+id/Chess46"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess47"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -599,8 +602,8 @@
 
                 <ImageView
                     android:id="@+id/Chess47"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess48"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -610,8 +613,8 @@
 
                 <ImageView
                     android:id="@+id/Chess48"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -624,8 +627,8 @@
 
         <LinearLayout
             android:id="@+id/row7"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -634,8 +637,8 @@
 
                 <ImageView
                     android:id="@+id/Chess49"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess50"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -645,8 +648,8 @@
 
                 <ImageView
                     android:id="@+id/Chess50"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess51"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -656,8 +659,8 @@
 
                 <ImageView
                     android:id="@+id/Chess51"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess52"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -667,8 +670,8 @@
 
                 <ImageView
                     android:id="@+id/Chess52"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess53"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -678,8 +681,8 @@
 
                 <ImageView
                     android:id="@+id/Chess53"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess54"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -689,8 +692,8 @@
 
                 <ImageView
                     android:id="@+id/Chess54"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess55"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -700,8 +703,8 @@
 
                 <ImageView
                     android:id="@+id/Chess55"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess56"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -711,8 +714,8 @@
 
                 <ImageView
                     android:id="@+id/Chess56"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -725,8 +728,8 @@
 
         <LinearLayout
             android:id="@+id/row8"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -735,8 +738,8 @@
 
                 <ImageView
                     android:id="@+id/Chess57"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess58"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -746,8 +749,8 @@
 
                 <ImageView
                     android:id="@+id/Chess58"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess59"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -757,8 +760,8 @@
 
                 <ImageView
                     android:id="@+id/Chess59"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess60"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -768,8 +771,8 @@
 
                 <ImageView
                     android:id="@+id/Chess60"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess61"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -779,8 +782,8 @@
 
                 <ImageView
                     android:id="@+id/Chess61"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess62"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -790,8 +793,8 @@
 
                 <ImageView
                     android:id="@+id/Chess62"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess63"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -801,8 +804,8 @@
 
                 <ImageView
                     android:id="@+id/Chess63"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Chess64"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -812,8 +815,8 @@
 
                 <ImageView
                     android:id="@+id/Chess64"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -830,9 +833,42 @@
         android:id="@+id/ChessSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ChessReset"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ChessReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="@+id/ChessSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ChessSubmit" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/ChessSubmit"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChessBoard"
+        app:srcCompat="@android:color/background_dark" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@android:color/holo_blue_dark" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
