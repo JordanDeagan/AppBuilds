@@ -43,7 +43,7 @@
                 android:paddingEnd="8dp">
 
                 <ImageView
-                    android:id="@+id/Chess3"
+                    android:id="@+id/Inside3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -68,7 +68,7 @@
                 android:paddingEnd="8dp">
 
                 <ImageView
-                    android:id="@+id/Chess4"
+                    android:id="@+id/Inside4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -93,7 +93,7 @@
                 android:paddingEnd="8dp">
 
                 <ImageView
-                    android:id="@+id/Chess5"
+                    android:id="@+id/Inside5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -118,7 +118,7 @@
                 android:paddingEnd="8dp">
 
                 <ImageView
-                    android:id="@+id/Chess6"
+                    android:id="@+id/Inside6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -143,7 +143,7 @@
                 android:paddingEnd="8dp">
 
                 <ImageView
-                    android:id="@+id/Chess7"
+                    android:id="@+id/Inside7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -184,7 +184,7 @@
                 android:paddingEnd="8dp">
 
                 <ImageView
-                    android:id="@+id/Chess8"
+                    android:id="@+id/Inside8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -235,7 +235,7 @@
                 android:paddingEnd="8dp">
 
                 <ImageView
-                    android:id="@+id/Chess10"
+                    android:id="@+id/Inside10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

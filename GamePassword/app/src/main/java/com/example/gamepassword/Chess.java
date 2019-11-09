@@ -1,18 +1,24 @@
 package com.example.gamepassword;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Switch;
 
 public class Chess extends GameBase {
     Button submit;
-    ImageView[] board;
+    FrameLayout[] board;
+    Drawable[] pieces;
     ChessObject gameBoard;
+    boolean PieceSelected;
+    String SelectedPiece;
+    ImageView blackPawn, whiteRook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +26,7 @@ public class Chess extends GameBase {
         setContentView(R.layout.activity_chess);
         gameBoard = new ChessObject();
         setValues();
-        board = new ImageView[64];
+        board = new FrameLayout[64];
         board[0] = findViewById(R.id.Chess1);
         board[1] = findViewById(R.id.Chess2);
         board[2] = findViewById(R.id.Chess3);
@@ -90,7 +96,10 @@ public class Chess extends GameBase {
             board[i].setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View view, MotionEvent motionEvent) {
-                    gameBoard.placePiece(finalI, "pawn");
+                    if(PieceSelected) {
+                        gameBoard.placePiece(finalI, SelectedPiece);
+
+                    }
                     return false;
                 }
             });
@@ -102,11 +111,22 @@ public class Chess extends GameBase {
                 returnObjectHash();
             }
         });
+        blackPawn = findViewById(R.id.BlackPawn);
+        whiteRook = findViewById(R.id.WhiteRook);
+        PieceSelected = false;
+        SelectedPiece = "";
+//        ImageView temp = new ImageView(this);
+//        temp.setImageDrawable(blackPawn.getDrawable());
+//        board[63].addView(temp);
+//        ImageView temp2 = new ImageView(this);
+//        temp2.setImageDrawable(whiteRook.getDrawable());
+//        board[62].addView(temp2);
     }
 
     @Override
     protected void reset() {
-
+        finish();
+        startActivity(getIntent());
     }
 
     @Override

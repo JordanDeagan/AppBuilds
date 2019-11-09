@@ -20,6 +20,18 @@ public class ChessObject implements GameObject {
             chessBoard.put(space, temp);
         }
     }
+
+    public boolean hasPiece(Integer space){
+        return chessBoard.containsKey(space);
+    }
+
+    public String getPiece(Integer space){
+        if (chessBoard.containsKey(space)){
+            return chessBoard.get(space).getFirst();
+        }
+        return null;
+    }
+
     @Override
     public String returnHash() {
         byte[] hashedBoard = MainActivity.db.hashed(chessBoard.toString(), "Chess".getBytes());
