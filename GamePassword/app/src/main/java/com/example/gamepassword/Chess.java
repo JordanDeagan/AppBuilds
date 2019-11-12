@@ -12,21 +12,91 @@ import android.widget.ImageView;
 import android.widget.Switch;
 
 public class Chess extends GameBase {
-    Button submit;
+    Button submit, reset;
     FrameLayout[] board;
     Drawable[] pieces;
     ChessObject gameBoard;
     boolean PieceSelected;
-    String SelectedPiece;
-    ImageView blackPawn, whiteRook;
+    int SelectedPiece;
+    String PassedPiece;
+    ImageView[] selectablePieces;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chess);
         gameBoard = new ChessObject();
-        setValues();
         board = new FrameLayout[64];
+        selectablePieces = new ImageView[12];
+        pieces = new Drawable[12];
+        setValues();
+        buildBoard();
+        for (int i = 0; i<64; i++){
+            final Integer finalI = i;
+            board[i].setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View view, MotionEvent motionEvent) {
+                    if(PieceSelected) {
+                        ImageView temp = new ImageView(getApplicationContext());
+                        temp.setImageDrawable(pieces[SelectedPiece]);
+                        board[finalI].addView(temp);
+                        switch (SelectedPiece){
+                            case 0: PassedPiece = "blackPawn"; break;
+                            case 1: PassedPiece = "blackBishop"; break;
+                            case 2: PassedPiece = "blackKnight"; break;
+                            case 3: PassedPiece = "blackRook"; break;
+                            case 4: PassedPiece = "blackQueen"; break;
+                            case 5: PassedPiece = "blackKing"; break;
+                            case 6: PassedPiece = "whitePawn"; break;
+                            case 7: PassedPiece = "whiteBishop"; break;
+                            case 8: PassedPiece = "whiteKnight"; break;
+                            case 9: PassedPiece = "whiteRook"; break;
+                            case 10: PassedPiece = "whiteQueen"; break;
+                            case 11: PassedPiece = "whiteKing"; break;
+                        }
+                        gameBoard.placePiece(finalI, PassedPiece);
+                        SelectedPiece = -1;
+                        PieceSelected = false;
+                    }
+                    return false;
+                }
+            });
+        }
+        for (int i = 0;i<12;i++){
+            pieces[i] = selectablePieces[i].getDrawable();
+            final int finalI = i;
+            selectablePieces[i].setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View view, MotionEvent motionEvent) {
+                    PieceSelected = true;
+                    SelectedPiece = finalI;
+                    return false;
+                }
+            });
+        }
+        submit = findViewById(R.id.ChessSubmit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                returnObjectHash();
+            }
+        });
+        reset = findViewById(R.id.ChessReset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reset();
+            }
+        });
+
+        PieceSelected = false;
+        SelectedPiece = -1;
+    }
+
+    private void buildBoard(){
+        board = new FrameLayout[64];
+        selectablePieces = new ImageView[12];
+        pieces = new Drawable[12];
         board[0] = findViewById(R.id.Chess1);
         board[1] = findViewById(R.id.Chess2);
         board[2] = findViewById(R.id.Chess3);
@@ -91,36 +161,22 @@ public class Chess extends GameBase {
         board[61] = findViewById(R.id.Chess62);
         board[62] = findViewById(R.id.Chess63);
         board[63] = findViewById(R.id.Chess64);
-        for (int i = 0; i<64; i++){
-            final Integer finalI = i;
-            board[i].setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View view, MotionEvent motionEvent) {
-                    if(PieceSelected) {
-                        gameBoard.placePiece(finalI, SelectedPiece);
 
-                    }
-                    return false;
-                }
-            });
+        selectablePieces[0] = findViewById(R.id.BlackPawn);
+        selectablePieces[1] = findViewById(R.id.BlackBishop);
+        selectablePieces[2] = findViewById(R.id.BlackKnight);
+        selectablePieces[3] = findViewById(R.id.BlackRook);
+        selectablePieces[4] = findViewById(R.id.BlackQueen);
+        selectablePieces[5] = findViewById(R.id.BlackKing);
+        selectablePieces[6] = findViewById(R.id.WhitePawn);
+        selectablePieces[7] = findViewById(R.id.WhiteBishop);
+        selectablePieces[8] = findViewById(R.id.WhiteKnight);
+        selectablePieces[9] = findViewById(R.id.WhiteRook);
+        selectablePieces[10] = findViewById(R.id.WhiteQueen);
+        selectablePieces[11] = findViewById(R.id.WhiteKing);
+        for (int i = 0;i<12;i++){
+            pieces[i] = selectablePieces[i].getDrawable();
         }
-        submit = findViewById(R.id.ChessSubmit);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                returnObjectHash();
-            }
-        });
-        blackPawn = findViewById(R.id.BlackPawn);
-        whiteRook = findViewById(R.id.WhiteRook);
-        PieceSelected = false;
-        SelectedPiece = "";
-//        ImageView temp = new ImageView(this);
-//        temp.setImageDrawable(blackPawn.getDrawable());
-//        board[63].addView(temp);
-//        ImageView temp2 = new ImageView(this);
-//        temp2.setImageDrawable(whiteRook.getDrawable());
-//        board[62].addView(temp2);
     }
 
     @Override

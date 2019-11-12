@@ -1185,6 +1185,17 @@
         app:layout_constraintStart_toEndOf="@+id/ChessSubmit" />
 
     <ImageView
+        android:id="@+id/BlackPawn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/WhitePawn"
+        app:layout_constraintEnd_toStartOf="@+id/BlackBishop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChessBoard"
+        app:srcCompat="@mipmap/black_pawn_foreground" />
+
+    <ImageView
         android:id="@+id/BlackBishop"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -1207,18 +1218,6 @@
         app:srcCompat="@mipmap/black_knight_foreground" />
 
     <ImageView
-        android:id="@+id/BlackKing"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/BlackQueen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/BlackQueen"
-        app:layout_constraintTop_toTopOf="@+id/BlackQueen"
-        app:srcCompat="@mipmap/black_king_foreground" />
-
-    <ImageView
         android:id="@+id/BlackRook"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -1228,18 +1227,6 @@
         app:layout_constraintStart_toEndOf="@+id/BlackKnight"
         app:layout_constraintTop_toTopOf="@+id/BlackKnight"
         app:srcCompat="@mipmap/black_rook_foreground" />
-
-    <ImageView
-        android:id="@+id/BlackPawn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/WhitePawn"
-        app:layout_constraintEnd_toStartOf="@+id/BlackBishop"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ChessBoard"
-        app:srcCompat="@mipmap/black_pawn_foreground" />
 
     <ImageView
         android:id="@+id/BlackQueen"
@@ -1253,10 +1240,20 @@
         app:srcCompat="@mipmap/black_queen_foreground" />
 
     <ImageView
+        android:id="@+id/BlackKing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/BlackQueen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/BlackQueen"
+        app:layout_constraintTop_toTopOf="@+id/BlackQueen"
+        app:srcCompat="@mipmap/black_king_foreground" />
+
+    <ImageView
         android:id="@+id/WhitePawn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toTopOf="@+id/ChessSubmit"
         app:layout_constraintEnd_toStartOf="@+id/WhiteBishop"
         app:layout_constraintHorizontal_bias="0.5"
@@ -1312,7 +1309,6 @@
         android:id="@+id/WhiteKing"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/WhiteQueen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
