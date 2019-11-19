@@ -36,7 +36,7 @@ public class Chess extends GameBase {
             board[i].setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View view, MotionEvent motionEvent) {
-                    if(PieceSelected) {
+                    if(PieceSelected && !gameBoard.hasPiece(finalI)) {
                         ImageView temp = new ImageView(getApplicationContext());
                         temp.setImageDrawable(pieces[SelectedPiece]);
                         board[finalI].addView(temp);
@@ -177,12 +177,6 @@ public class Chess extends GameBase {
         for (int i = 0;i<12;i++){
             pieces[i] = selectablePieces[i].getDrawable();
         }
-    }
-
-    @Override
-    protected void reset() {
-        finish();
-        startActivity(getIntent());
     }
 
     @Override

@@ -15,7 +15,10 @@ public abstract class GameBase extends AppCompatActivity {
     protected ArrayList<String> games, previous;
     protected int state;
 
-    abstract protected void reset();
+    protected void reset(){
+        finish();
+        startActivity(getIntent());
+    }
 
     protected void setValues(){
         username = getIntent().getStringExtra("USERNAME");
