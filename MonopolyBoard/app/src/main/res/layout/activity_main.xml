@@ -8,9 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/BoardView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView65"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView66"
-            app:srcCompat="@color/magenta" />
+            app:srcCompat="@android:color/holo_blue_dark" />
 
         <ImageView
             android:id="@+id/imageView60"
@@ -46,7 +45,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView65"
-            app:srcCompat="@color/magenta" />
+            app:srcCompat="@android:color/holo_blue_dark" />
 
         <ImageView
             android:id="@+id/imageView62"
@@ -57,7 +56,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView60"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView63"
-            app:srcCompat="@android:color/holo_orange_dark" />
+            app:srcCompat="@android:color/holo_green_dark" />
 
         <ImageView
             android:id="@+id/imageView63"
@@ -79,7 +78,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView64"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView60"
-            app:srcCompat="@color/magenta" />
+            app:srcCompat="@android:color/darker_gray" />
 
         <ImageView
             android:id="@+id/imageView67"
@@ -90,7 +89,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView61"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView11"
-            app:srcCompat="@android:color/holo_orange_dark" />
+            app:srcCompat="@android:color/holo_green_dark" />
 
         <ImageView
             android:id="@+id/imageView61"
@@ -101,7 +100,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView63"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView67"
-            app:srcCompat="@android:color/holo_orange_dark" />
+            app:srcCompat="@android:color/holo_green_dark" />
 
         <ImageView
             android:id="@+id/imageView65"
@@ -117,7 +116,7 @@
         <ImageView
             android:id="@+id/imageView30"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView26"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -128,7 +127,7 @@
         <ImageView
             android:id="@+id/imageView29"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView23"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -139,7 +138,7 @@
         <ImageView
             android:id="@+id/imageView23"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView25"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -150,7 +149,7 @@
         <ImageView
             android:id="@+id/imageView24"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView28"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -161,7 +160,7 @@
         <ImageView
             android:id="@+id/imageView25"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView24"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -172,7 +171,7 @@
         <ImageView
             android:id="@+id/imageView26"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView27"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -183,7 +182,7 @@
         <ImageView
             android:id="@+id/imageView27"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView31"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -194,7 +193,7 @@
         <ImageView
             android:id="@+id/imageView28"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView14"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -205,7 +204,7 @@
         <ImageView
             android:id="@+id/imageView31"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView29"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -251,8 +250,8 @@
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView16"
@@ -271,7 +270,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView21"
             app:layout_constraintTop_toTopOf="@+id/imageView21"
-            app:srcCompat="@android:color/holo_blue_light" />
+            app:srcCompat="@android:color/holo_blue_bright" />
 
         <ImageView
             android:id="@+id/imageView16"
@@ -283,7 +282,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView14"
             app:layout_constraintTop_toTopOf="@+id/imageView14"
-            app:srcCompat="@android:color/holo_blue_light" />
+            app:srcCompat="@android:color/holo_blue_bright" />
 
         <ImageView
             android:id="@+id/imageView17"
@@ -299,8 +298,8 @@
 
         <ImageView
             android:id="@+id/imageView18"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -319,7 +318,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView22"
             app:layout_constraintTop_toTopOf="@+id/imageView22"
-            app:srcCompat="@android:color/holo_blue_light" />
+            app:srcCompat="@android:color/holo_blue_bright" />
 
         <ImageView
             android:id="@+id/imageView22"
@@ -347,7 +346,7 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
@@ -355,11 +354,11 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView9"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@color/yellow"/>
+            app:srcCompat="@color/yellow" />
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
@@ -371,8 +370,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView30"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -383,7 +382,7 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -395,7 +394,7 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
@@ -407,7 +406,7 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
@@ -419,8 +418,8 @@
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toTopOf="@+id/imageView67"
             app:layout_constraintEnd_toEndOf="parent"
@@ -431,7 +430,7 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -443,7 +442,7 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="@+id/imageView8"
@@ -455,7 +454,7 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="@+id/imageView7"
@@ -467,7 +466,7 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_border"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
