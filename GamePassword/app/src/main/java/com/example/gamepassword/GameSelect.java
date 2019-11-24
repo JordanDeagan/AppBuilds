@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,13 +20,18 @@ public class GameSelect extends AppCompatActivity {
     private int selectionState;
     private String username;
     LinearLayout chess;
-    Button sub;
+    Button sub,back,reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_select);
         db = MainActivity.db;
+        back = findViewById(R.id.back);
+        sub = findViewById(R.id.submit);
+        reset = findViewById(R.id.resetChoice);
+        TextView header = findViewById(R.id.FirstHeader);
+        chess = findViewById(R.id.Chess);
         if (getIntent().getExtras().getBoolean("INITIAL")){
             games = new ArrayList<>();
         }
@@ -34,24 +40,55 @@ public class GameSelect extends AppCompatActivity {
         }
         username = getIntent().getStringExtra("USERNAME");
         selectionState = getIntent().getExtras().getInt("STATE");
+
         if(selectionState==2){
             previous=getIntent().getStringArrayListExtra("LAST");
+            header.setText("Confirm Password");
+            back.setText("Restart");
         }
-        chess = findViewById(R.id.Chess);
+        else if (selectionState == 1){
+            header.setText("Make Password");
+        }
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (selectionState == 0 || selectionState == 1) {
+                    alterBasic(selectionState);
+                }
+                else if(selectionState==2){
+                    confirmPassword(previous);
+                }
+            }
+        });
+
         chess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startGame(Chess.class);
             }
         });
-        sub = findViewById(R.id.submit);
+
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 submit();
             }
         });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(selectionState == 0 || selectionState == 1) {
+                    goBack();
+                }
+                else if(selectionState==2){
+                    alterBasic(1);
+                }
+            }
+        });
     }
+
 
     private void startGame(Class choice){
         if(selectionState==0 || selectionState == 1) {
@@ -79,21 +116,36 @@ public class GameSelect extends AppCompatActivity {
                 startActivity(intent);
             }
         } else if(selectionState==1){
-            confirmPassword();
+            confirmPassword(games);
             Log.d("GameSelect","Confirm Password");
         }
         else if(selectionState ==2){
             if(previous.equals(games)){
                 db.addUser(username,games);
-                Intent intent = new Intent(getBaseContext(),MainActivity.class);
-                startActivity(intent);
+                goBack();
             }
         }
     }
 
-    private void confirmPassword(){
-        previous = games;
-        games = new ArrayList<>();
-        selectionState = 2;
+    private void goBack(){
+        Intent intent = new Intent(getBaseContext(), MainActivity.class);
+        startActivity(intent);
+    }
+
+    private void confirmPassword(ArrayList<String> previous){
+        Intent intent = new Intent(getBaseContext(), getClass());
+        intent.putExtra("INITIAL", true);
+        intent.putExtra("USERNAME", username);
+        intent.putExtra("STATE", 2);
+        intent.putExtra("LAST", previous);
+        startActivity(intent);
+    }
+
+    private void alterBasic(int state){
+        Intent intent = new Intent(getBaseContext(), getClass());
+        intent.putExtra("INITIAL", true);
+        intent.putExtra("USERNAME", username);
+        intent.putExtra("STATE", state);
+        startActivity(intent);
     }
 }
