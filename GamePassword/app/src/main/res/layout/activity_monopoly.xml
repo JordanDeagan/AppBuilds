@@ -389,10 +389,10 @@
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/Monopoly21"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Monopoly23"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/Monopoly21">
+            app:layout_constraintStart_toEndOf="@+id/Monopoly21"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/Kentucky"
@@ -407,10 +407,10 @@
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/Monopoly21"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Monopoly24"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/Monopoly22">
+            app:layout_constraintStart_toEndOf="@+id/Monopoly22"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/Chance2"
@@ -425,10 +425,10 @@
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/Monopoly21"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Monopoly25"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/Monopoly23">
+            app:layout_constraintStart_toEndOf="@+id/Monopoly23"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/Indiana"
@@ -443,10 +443,10 @@
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/Monopoly21"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Monopoly26"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/Monopoly24">
+            app:layout_constraintStart_toEndOf="@+id/Monopoly24"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/Illinios"
@@ -461,10 +461,10 @@
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/Monopoly21"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Monopoly27"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/Monopoly25">
+            app:layout_constraintStart_toEndOf="@+id/Monopoly25"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/BandO"
@@ -479,10 +479,10 @@
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/Monopoly21"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Monopoly28"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/Monopoly26">
+            app:layout_constraintStart_toEndOf="@+id/Monopoly26"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/Atlantic"
@@ -497,10 +497,10 @@
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/Monopoly21"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Monopoly29"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/Monopoly27">
+            app:layout_constraintStart_toEndOf="@+id/Monopoly27"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/Venthor"
@@ -515,10 +515,10 @@
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/Monopoly21"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Monopoly30"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/Monopoly28">
+            app:layout_constraintStart_toEndOf="@+id/Monopoly28"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/Water"
@@ -533,10 +533,10 @@
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/Monopoly21"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Monopoly31"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/Monopoly29">
+            app:layout_constraintStart_toEndOf="@+id/Monopoly29"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/Marvin"
@@ -718,4 +718,112 @@
         </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/MonopolySubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/MonopolyReset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/MonopolyReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/MonopolySubmit" />
+
+    <ImageView
+        android:id="@+id/Battleship"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Iron"
+        app:layout_constraintEnd_toStartOf="@+id/Car"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BoardView"
+        app:srcCompat="@mipmap/battleship_token_foreground" />
+
+    <ImageView
+        android:id="@+id/Car"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Battleship"
+        app:layout_constraintEnd_toStartOf="@+id/Dog"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Battleship"
+        app:layout_constraintTop_toTopOf="@+id/Battleship"
+        app:srcCompat="@mipmap/car_token_foreground" />
+
+    <ImageView
+        android:id="@+id/Dog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Car"
+        app:layout_constraintEnd_toStartOf="@+id/Hat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Car"
+        app:layout_constraintTop_toTopOf="@+id/Car"
+        app:srcCompat="@mipmap/dog_token_foreground" />
+
+    <ImageView
+        android:id="@+id/Hat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Dog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Dog"
+        app:layout_constraintTop_toTopOf="@+id/Dog"
+        app:srcCompat="@mipmap/hat_token_foreground" />
+
+    <ImageView
+        android:id="@+id/Iron"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/MonopolySubmit"
+        app:layout_constraintEnd_toStartOf="@+id/Shoe"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Battleship"
+        app:srcCompat="@mipmap/iron_token_foreground" />
+
+    <ImageView
+        android:id="@+id/Shoe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Iron"
+        app:layout_constraintEnd_toStartOf="@+id/Thimble"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Iron"
+        app:layout_constraintTop_toBottomOf="@+id/Battleship"
+        app:srcCompat="@mipmap/shoe_token_foreground" />
+
+    <ImageView
+        android:id="@+id/Thimble"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Shoe"
+        app:layout_constraintEnd_toStartOf="@+id/Wheelbarrow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Shoe"
+        app:layout_constraintTop_toTopOf="@+id/Shoe"
+        app:srcCompat="@mipmap/thimble_token_foreground" />
+
+    <ImageView
+        android:id="@+id/Wheelbarrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Thimble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Thimble"
+        app:layout_constraintTop_toTopOf="@+id/Thimble"
+        app:srcCompat="@mipmap/wheelbarrow_token_foreground" />
 </androidx.constraintlayout.widget.ConstraintLayout>

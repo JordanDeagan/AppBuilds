@@ -195,34 +195,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="Ship Deployment"
+                    android:text="Battleship"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/TicketToRide"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp">
-
-                <ImageView
-                    android:id="@+id/Chess9"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:srcCompat="@color/colorPrimaryDark" />
-
-                <TextView
-                    android:id="@+id/Game7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="Trip Planner"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
             </LinearLayout>
 
             <LinearLayout
@@ -246,7 +221,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="Word Builder"
+                    android:text="Scrabble"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/TicketToRide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <ImageView
+                    android:id="@+id/Chess9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/Game7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Ticket to Ride"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
             </LinearLayout>
 
