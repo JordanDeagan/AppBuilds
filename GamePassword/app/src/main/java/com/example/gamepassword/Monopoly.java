@@ -149,24 +149,25 @@ public class Monopoly extends GameBase {
     }
     @Override
     protected void returnObjectHash() {
-        if(state==0 || state == 1) {
-            Intent intent = new Intent(getBaseContext(), GameSelect.class);
-            games.add(gameBoard.returnHash());
-            intent.putExtra("USERNAME", username);
-            intent.putExtra("GAMES", games);
-            intent.putExtra("STATE", state);
-            intent.putExtra("INITIAL", false);
-            startActivity(intent);
-        }
-        else if(state == 2){
-            Intent intent = new Intent(getBaseContext(), GameSelect.class);
-            games.add(gameBoard.returnHash());
-            intent.putExtra("USERNAME", username);
-            intent.putExtra("GAMES", games);
-            intent.putExtra("STATE", state);
-            intent.putExtra("INITIAL", false);
-            intent.putExtra("LAST",previous);
-            startActivity(intent);
+        if(!gameBoard.isEmpty()) {
+            if (state == 0 || state == 1) {
+                Intent intent = new Intent(getBaseContext(), GameSelect.class);
+                games.add(gameBoard.returnHash());
+                intent.putExtra("USERNAME", username);
+                intent.putExtra("GAMES", games);
+                intent.putExtra("STATE", state);
+                intent.putExtra("INITIAL", false);
+                startActivity(intent);
+            } else if (state == 2) {
+                Intent intent = new Intent(getBaseContext(), GameSelect.class);
+                games.add(gameBoard.returnHash());
+                intent.putExtra("USERNAME", username);
+                intent.putExtra("GAMES", games);
+                intent.putExtra("STATE", state);
+                intent.putExtra("INITIAL", false);
+                intent.putExtra("LAST", previous);
+                startActivity(intent);
+            }
         }
     }
 }
