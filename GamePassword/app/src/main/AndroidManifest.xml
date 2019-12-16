@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Monopoly"></activity>
+        <activity android:name=".Clue"></activity>
+        <activity android:name=".Monopoly" />
         <activity android:name=".Chess" />
         <activity android:name=".LoggedIn" />
         <activity android:name=".MainActivity">
