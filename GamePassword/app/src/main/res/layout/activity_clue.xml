@@ -6,33 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".Clue">
 
-    <ImageView
-        android:id="@+id/ClueBoard"
-        android:layout_width="360dp"
-        android:layout_height="360dp"
+    <ListView
+        android:id="@+id/RumorList"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/board_foreground" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="96dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/ClueBoard"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@color/cardview_light_background" />
+    </ListView>
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.example.gamepassword.rumor"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/chessSubmit2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Undo"
+        app:layout_constraintBottom_toBottomOf="@+id/chessSubmit2"
+        app:layout_constraintEnd_toStartOf="@+id/chessReset2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chessSubmit2" />
+
+    <Button
+        android:id="@+id/chessSubmit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/chessReset2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="@+id/chessSubmit2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ClueBoard" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
