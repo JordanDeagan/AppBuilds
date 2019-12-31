@@ -45,9 +45,9 @@ public class RumorArray extends ArrayAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.Room.setImageDrawable(rumor.getRoom());
-        holder.Weapon.setImageDrawable(rumor.getWeapon());
-        holder.Suspect.setImageDrawable(rumor.getSuspect());
+        holder.Room.setImageResource(rumor.getRoom());
+        holder.Weapon.setImageResource(rumor.getWeapon());
+        holder.Suspect.setImageResource(rumor.getSuspect());
 
         return convertView;
     }

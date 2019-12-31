@@ -14,7 +14,7 @@ public class ClueObject implements GameObject {
         rumors = new ArrayList<>();
         empty = true;
     }
-    public void placePiece(String R, String S, String W, Drawable r, Drawable s, Drawable w){
+    public void makeRumor(String R, String S, String W, int r, int s, int w){
         rumors.add(new Rumor(R,S,W,r,s,w));
         if(empty){
             empty = false;

@@ -9,8 +9,8 @@ import java.util.WeakHashMap;
 
 public class Rumor {
     String Room, Sus, Weap;
-    Drawable RoomImage, Suspect, Weapon;
-    public Rumor(String R, String S, String W, Drawable r, Drawable s, Drawable w){
+    int RoomImage, Suspect, Weapon;
+    public Rumor(String R, String S, String W, int r, int s, int w){
         Room = R;
         Sus = S;
         Weap = R;
@@ -26,15 +26,15 @@ public class Rumor {
         return r;
     }
 
-    public Drawable getRoom(){
+    public int getRoom(){
         return RoomImage;
     }
 
-    public Drawable getSuspect(){
+    public int getSuspect(){
         return Suspect;
     }
 
-    public Drawable getWeapon(){
+    public int getWeapon(){
         return Weapon;
     }
 }

@@ -9,7 +9,6 @@ import android.widget.ListView;
 import java.util.List;
 
 public class Clue extends GameBase {
-    ImageView board;
     ListView mListView;
     ClueObject clueObject;
     RumorArray rumorAdapt;
@@ -18,17 +17,15 @@ public class Clue extends GameBase {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clue);
-        board = findViewById(R.id.ClueBoard);
         clueObject = new ClueObject();
         mListView =(ListView) findViewById(R.id.RumorList);
-
-        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         setAdapter();
     }
 
     private void setAdapter(){
         rumorAdapt = new RumorArray(this, R.layout.rumor, clueObject.rumors);
-
+        clueObject.makeRumor("Hall","Gray","Knife",R.mipmap.hall_foreground,R.mipmap.gray_foreground,R.mipmap.knife_foreground);
+        clueObject.makeRumor("Kitchen","Rose","Pipe",R.mipmap.kitchen_foreground,R.mipmap.rose_foreground,R.mipmap.pipe_foreground);
         mListView.setAdapter(rumorAdapt);
     }
 }
