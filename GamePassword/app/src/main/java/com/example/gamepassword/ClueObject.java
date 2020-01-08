@@ -1,7 +1,5 @@
 package com.example.gamepassword;
 
-import android.graphics.drawable.Drawable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,5 +28,14 @@ public class ClueObject implements GameObject {
     @Override
     public boolean isEmpty(){
         return empty;
+    }
+
+    public void undo(){
+        if(rumors.size()>0) {
+            rumors.remove(rumors.size() - 1);
+            if(rumors.size()==0){
+                empty = true;
+            }
+        }
     }
 }

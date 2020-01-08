@@ -1,31 +1,51 @@
 package com.example.gamepassword;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.widget.ImageView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
-
-import java.util.List;
 
 public class Clue extends GameBase {
     ListView mListView;
-    ClueObject clueObject;
+    ClueObject gameBoard;
     RumorArray rumorAdapt;
+    Button startRumor, submit, undo, reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clue);
-        clueObject = new ClueObject();
+        setValues();
+        gameBoard = new ClueObject();
         mListView =(ListView) findViewById(R.id.RumorList);
+        startRumor = findViewById(R.id.RumorButton);
+        submit = findViewById(R.id.clueSubmit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                returnObjectHash();
+            }
+        });
+        undo = findViewById(R.id.clueUndo);
+        undo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gameBoard.undo();
+            }
+        });
+        reset = findViewById(R.id.clueReset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reset();
+            }
+        });
         setAdapter();
     }
 
     private void setAdapter(){
-        rumorAdapt = new RumorArray(this, R.layout.rumor, clueObject.rumors);
-        clueObject.makeRumor("Hall","Gray","Knife",R.mipmap.hall_foreground,R.mipmap.gray_foreground,R.mipmap.knife_foreground);
-        clueObject.makeRumor("Kitchen","Rose","Pipe",R.mipmap.kitchen_foreground,R.mipmap.rose_foreground,R.mipmap.pipe_foreground);
+        rumorAdapt = new RumorArray(this, R.layout.rumor, gameBoard.rumors);
         mListView.setAdapter(rumorAdapt);
     }
 }

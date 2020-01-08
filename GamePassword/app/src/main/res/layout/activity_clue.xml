@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:scrollbars="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/RumorButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,44 +19,44 @@
     </ListView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/RumorButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/chessSubmit2"
+        android:text="Start Rumor"
+        app:layout_constraintBottom_toTopOf="@+id/clueSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/clueUndo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Undo"
-        app:layout_constraintBottom_toBottomOf="@+id/chessSubmit2"
-        app:layout_constraintEnd_toStartOf="@+id/chessReset2"
+        app:layout_constraintBottom_toBottomOf="@+id/clueSubmit"
+        app:layout_constraintEnd_toStartOf="@+id/clueReset"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/chessSubmit2" />
+        app:layout_constraintStart_toEndOf="@+id/clueSubmit" />
 
     <Button
-        android:id="@+id/chessSubmit2"
+        android:id="@+id/clueSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/clueUndo"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/chessReset2"
+        android:id="@+id/clueReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset"
-        app:layout_constraintBottom_toBottomOf="@+id/chessSubmit2"
+        app:layout_constraintBottom_toBottomOf="@+id/clueSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/clueUndo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
