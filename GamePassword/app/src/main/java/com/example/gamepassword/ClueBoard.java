@@ -1,9 +1,11 @@
 package com.example.gamepassword;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +22,7 @@ public class ClueBoard extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.clue_board_layout);
+        setContentView(R.layout.activity_clue_board);
         study = findViewById(R.id.Study);
         billiard = findViewById(R.id.Billiard);
         ball = findViewById(R.id.Ball);
@@ -96,6 +98,22 @@ public class ClueBoard extends AppCompatActivity {
                 return false;
             }
         });
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(roomSelected){
+                    submitRoom();
+                }
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setResult(RESULT_CANCELED, new Intent());
+
+                finish();
+            }
+        });
         roomSelected = false;
     }
 
@@ -106,5 +124,13 @@ public class ClueBoard extends AppCompatActivity {
         if(!roomSelected){
             roomSelected = true;
         }
+    }
+
+    void submitRoom(){
+        Intent output = new Intent();
+        output.putExtra(Clue.KEY_ROOM_I, roomImage);
+        output.putExtra(Clue.KEY_ROOM_N, roomName);
+        setResult(RESULT_OK, output);
+        finish();
     }
 }

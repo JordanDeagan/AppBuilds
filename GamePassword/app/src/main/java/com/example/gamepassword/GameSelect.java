@@ -9,10 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class GameSelect extends AppCompatActivity {
     public static DBHelper db;
@@ -25,7 +23,7 @@ public class GameSelect extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game_select);
+        setContentView(R.layout.activity_game_select);
         db = MainActivity.db;
         back = findViewById(R.id.back);
         sub = findViewById(R.id.submit);

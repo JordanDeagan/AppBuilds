@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".GameSelect" />
         <activity android:name=".GameBase" />
+        <activity android:name=".ClueBoard"/>
+        <activity android:name=".OtherChoice"/>
     </application>
 
 </manifest>
