@@ -121,20 +121,21 @@ public class GameSelect extends AppCompatActivity {
     }
 
     private void submit(){
-        if(selectionState==0){
-            if(db.logsIn(username,games)){
-                Intent intent = new Intent(getBaseContext(), LoggedIn.class);
-                intent.putExtra("USERNAME",username);
-                startActivity(intent);
-            }
-        } else if(selectionState==1){
-            confirmPassword(games);
-            Log.d("GameSelect","Confirm Password");
-        }
-        else if(selectionState ==2){
-            if(previous.equals(games)){
-                db.addUser(username,games);
-                goBack();
+        if(!games.isEmpty()) {
+            if (selectionState == 0) {
+                if (db.logsIn(username, games)) {
+                    Intent intent = new Intent(getBaseContext(), LoggedIn.class);
+                    intent.putExtra("USERNAME", username);
+                    startActivity(intent);
+                }
+            } else if (selectionState == 1) {
+                confirmPassword(games);
+                //Log.d("GameSelect","Confirm Password");
+            } else if (selectionState == 2) {
+                if (previous.equals(games)) {
+                    db.addUser(username, games);
+                    goBack();
+                }
             }
         }
     }
