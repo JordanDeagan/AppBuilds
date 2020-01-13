@@ -17,7 +17,7 @@ public class GameSelect extends AppCompatActivity {
     public ArrayList<String> games, previous;
     private int selectionState;
     private String username;
-    LinearLayout chess, monopoly, clue;
+    LinearLayout chess, monopoly, clue, scrabble;
     Button sub,back,reset;
 
     @Override
@@ -32,6 +32,7 @@ public class GameSelect extends AppCompatActivity {
         chess = findViewById(R.id.Chess);
         monopoly = findViewById(R.id.Monopoly);
         clue =  findViewById(R.id.Clue);
+        scrabble = findViewById(R.id.Scrabble);
         if (getIntent().getExtras().getBoolean("INITIAL")){
             games = new ArrayList<>();
         }
@@ -78,6 +79,12 @@ public class GameSelect extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startGame(Clue.class);
+            }
+        });
+        scrabble.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startGame(Scrabble.class);
             }
         });
 
